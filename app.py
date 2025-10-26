@@ -469,7 +469,6 @@ We take pride in our diverse and successful project portfolio!"""
         return f"""🏢 **ABOUT JP CONSTRUCTIONS**
 
 **Company Profile:**
-- **Founded:** {profile['year_started']} by {profile['founder']}
 - **Experience:** {profile['years_of_operation']}+ years
 - **License:** {profile['license']}
 - **Certifications:** {', '.join(profile['certifications'])}
@@ -812,4 +811,5 @@ def main():
         """)
 
 if __name__ == "__main__":
+
     main()
