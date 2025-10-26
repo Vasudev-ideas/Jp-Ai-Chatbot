@@ -39,49 +39,62 @@ class DualModelConstructionChatbot:
         return {
             "company_profile": {
                 "name": "JP Constructions",
-                "founder": "Mr.J Periyasamy",
+                "founder": "Mr. J. Periyasamy",
+                "year_started": 2025,
                 "years_of_operation": 22,
                 "license": "Class AAA Construction License",
                 "certifications": ["ISO 9001:2015", "ISO 14001:2015", "OHSAS 18001"],
                 "mission": "To deliver quality construction projects with innovation and reliability",
                 "vision": "To be the most trusted construction company in the region",
                 "core_values": ["Quality First", "Customer Focus", "Innovation", "Integrity"],
-                "office_locations": "Chennai"
+                "office_locations": ["Chennai"]
             },
             "projects": {
-                "total_completed": "40+",
-                "ongoing_projects": 6,
-                "upcoming_projects": 4,
+                "total_completed": 47,
+                "ongoing_projects": 8,
+                "upcoming_projects": 12,
                 "residential": {
                     "completed": 28,
                     "examples": [
-                        {"name": "JP Elite Homes", "year": 2023, "units": 120, "location": "Chennai", "features": "Smart Homes, Green Building"},
-                        {"name": "Prakash Paradise", "year": 2022, "units": 80, "location": "Bangalore", "features": ""},
-                        {"name": "Green Valley Residency", "year": 2021, "units": 60, "location": "Hyderabad", "features": "Eco-Friendly, Solar Powered"}
+                        {"name": "JP Elite Homes", "year": 2023, "units": 1, "location": "Chennai", "features": "Smart Homes, Green Building"},
+                        {"name": "Private residency", "year": 2024, "units": 1, "location": "Madipakkam", "features": " Apartments, Clubhouse"},
+                        {"name": "Flats", "year": 2017, "units": 1, "location": "Gudavancheri", "features": "Eco-Friendly, Solar Powered"}
                     ]
                 },
                 "commercial": {
-                    "completed": 7,
+                    "completed": 12,
                     "examples": [
-                        {"name": "Car Showroom", "year": 2023, "floors": 15, "area": "100,000 sq.ft"},
-                        {"name": "Clinic", "year": 2022, "floors": 12, "area": "250,000 sq.ft", },
-                        {"name": "Flats", "year": 2021, "area": "50,000 sq.ft"}
+                        {"name": "Clinic", "year": 2023, "floors": 15, "area": "100,000 sq.ft", "type": "Medical"},
+                        {"name": "Car showroom", "year": 2022, "floors": 12, "area": "250,000 sq.ft", "type": "Hyundai showroom"},
+                        
                     ]
                 },
-               
+                "industrial": {
+                    "completed": 7,
+                    "examples": [
+                        {"name": "JP Manufacturing Unit", "year": 2022, "area": "150,000 sq.ft"},
+                        {"name": "Logistics Park", "year": 2021, "area": "100,000 sq.ft"}
+                    ]
+                }
             },
             "team_strength": {
-                "total_employees": 45,
-                "architects": 3,
+                "total_employees": 85,
+                "architects": 2,
                 "civil_engineers": 5,
                 "project_managers": 5,
-                "site_engineers": 3,
-                "interior_designers": 7,
+                "site_engineers": 6,
+                "interior_designers": 8,
                 "quality_controllers": 5,
                 "safety_officers": 5,
                 "support_staff": 40
             },
-           
+            "awards_recognitions": [
+                "Best Construction Company 2023 - National Builders Association",
+                "Excellence in Residential Projects 2022",
+                "Green Building Award 2021 - Indian Green Building Council",
+                "Safety First Award 2020",
+                "Fastest Growing Construction Company 2019"
+            ],
             "services_offered": {
                 "residential": [
                     "Apartment Complexes",
@@ -112,10 +125,10 @@ class DualModelConstructionChatbot:
                 ]
             },
             "contact_information": {
-                "head_office": "12/768,Balaji Nagar 1st Street,Veerabathra Nagar,Vengaivasal,Medavakkam,Chennai 100",
+                "head_office": "12/768, Balaji Nagar 1st Street,Veerabathra Nagar ,Vengaivasal,Medavakkam Chennai 100",
                 "phone": "+91-9884627570",
                 "mobile": "+91-9444803194",
-                "email": "info@jpconstructions.com",
+                "email": "periyasamyvasu7255@gmail.com",
                 "website": "www.jpconstructions.com",
                 "office_hours": "Monday to Saturday: 9:00 AM - 6:00 PM"
             },
@@ -277,7 +290,7 @@ class DualModelConstructionChatbot:
 
         CONTACT INFORMATION:
         - Head Office: Chennai
-        - Phone: +91-44-12345678
+        - Phone: +91-9884627570
         - Email: info@jpconstructions.com
         - Website: www.jpconstructions.com
 
@@ -469,6 +482,7 @@ We take pride in our diverse and successful project portfolio!"""
         return f"""🏢 **ABOUT JP CONSTRUCTIONS**
 
 **Company Profile:**
+- **Founded:** {profile['year_started']} by {profile['founder']}
 - **Experience:** {profile['years_of_operation']}+ years
 - **License:** {profile['license']}
 - **Certifications:** {', '.join(profile['certifications'])}
@@ -536,7 +550,7 @@ def main():
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         border-left: 5px solid #3498db;
         transition: transform 0.3s ease;
-        background: url("C:/Users/vasan/OneDrive/Desktop/Chatbot/Main/jp-brand-logo.png")        
+             
     }
     
     .model-card:hover {
@@ -615,8 +629,8 @@ def main():
 
     # Professional Header
     st.markdown("""
-    <div class="professional-header" style="background-color: #000000;">
-        <h1 style="margin: 0; color: #DAA520;  font-size: 2.5rem;  font-family: 'Cinzel'"> JP Constructions</h1>
+    <div class="professional-header">
+        <h1 style="margin: 0; font-size: 2.5rem;background-color: #000;color: #DAA520;  font-family: 'Cinzel'"> JP Constructions</h1>
         <p style="margin: 0.5rem 0 0 0; font-size: 1.2rem; opacity: 0.9;">
             Dual AI Assistant System - Specialized Expertise
         </p>
@@ -811,5 +825,4 @@ def main():
         """)
 
 if __name__ == "__main__":
-
     main()
